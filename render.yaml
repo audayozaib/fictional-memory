@@ -1,0 +1,21 @@
+services:
+  - type: worker
+    name: telegram-copy-userbot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: SESSION_STRING
+        sync: false
+      - key: SOURCE_CHANNEL
+        sync: false
+      - key: TARGET_CHANNEL
+        sync: false
+      - key: TARGET_CHANNEL_LINK
+        sync: false
+      - key: TARGET_CHANNEL_USERNAME
+        sync: false
